@@ -1,3 +1,7 @@
 export default function Home() {
-  return <div>this is home</div>;
+  return (
+    <div className="">
+      <h2 className="text-6xl">This is home</h2>
+    </div>
+  );
 }
