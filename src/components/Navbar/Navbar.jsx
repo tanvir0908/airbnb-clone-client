@@ -49,14 +49,25 @@ export default function Navbar() {
             <HiMenu size={20} />
             <FaUserCircle className="hidden md:block" size={30} />
           </div>
+          {/* click menu */}
           {open && (
             <div className="absolute top-14 right-0 w-[12rem] md:w-[14rem] lg:w-3/4 shadow-md border border-gray-100  rounded-xl bg-white">
-              <p className="py-4 hover:bg-neutral-100 px-4 rounded-t-xl cursor-pointer">
-                Sign up
-              </p>
-              <p className="py-4 hover:bg-neutral-100 px-4 cursor-pointer">
-                Log in
-              </p>
+              <Link to={"/register"}>
+                <p
+                  onClick={handleMenuClick}
+                  className="py-4 hover:bg-neutral-100 px-4 rounded-t-xl cursor-pointer"
+                >
+                  Sign up
+                </p>
+              </Link>
+              <Link to={"login"}>
+                <p
+                  onClick={handleMenuClick}
+                  className="py-4 hover:bg-neutral-100 px-4 cursor-pointer"
+                >
+                  Log in
+                </p>
+              </Link>
               <hr />
               <p className="py-4 hover:bg-neutral-100 px-4 cursor-pointer">
                 Airbnb your home
